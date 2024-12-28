@@ -194,23 +194,23 @@ Se ejecuta en un entorno Ubuntu (ubuntu-latest).
 
 📀 *4. Pasos del Job:*
 
-✨️ Checkout repository: 
+✨️ *Checkout repository:*
 
 Clona el repositorio en el entorno de GitHub Actions.
 
-✨️ Log in to Docker Hub: 
+✨️ *Log in to Docker Hub:*
 
 Inicia sesión en Docker Hub usando las credenciales almacenadas en los secretos DOCKER_USERNAME y DOCKER_PASSWORD.
 
-✨️ Log in to GitHub Container Registry:
+✨️ *Log in to GitHub Container Registry:*
 
 Inicia sesión en GitHub Container Registry utilizando las credenciales del GITHUB_TOKEN.
 
-✨️ Extract metadata: 
+✨️ *Extract metadata:*
 
 Utiliza la acción docker/metadata-action para extraer las etiquetas y etiquetas adicionales para las imágenes Docker que se construirán, tanto para Docker Hub como para GitHub Container Registry.
 
-✨️ Build and push Docker images: 
+✨️ *Build and push Docker images:*
 
 Utiliza la acción docker/build-push-action para construir las imágenes Docker a partir del archivo Dockerfile y las sube a los registros definidos, aplicando las etiquetas y las etiquetas extraídas en el paso anterior.
 
