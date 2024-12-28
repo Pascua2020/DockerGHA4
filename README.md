@@ -8,7 +8,7 @@
 
 ```
 
-🟥 *Características*
+🟥 **Características**
 
 ⚡️ Docker: Empaqueta la aplicación Spring Boot en un contenedor para garantizar que se ejecute de la misma manera en cualquier entorno.
 
