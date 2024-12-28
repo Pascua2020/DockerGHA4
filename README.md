@@ -70,6 +70,21 @@ EOF
 
 ENTRYPOINT /app/run.sh
 ```
+Este Dockerfile crea una imagen Docker basada en busybox que ejecuta un script en un bucle infinito para mostrar la hora actual en tiempo real.
+
+1. Base de la imagen: Usa busybox:latest, una imagen minimalista de Unix.
+
+2. Copia del script: Copia un script llamado run.sh al contenedor, que:
+
+Imprime la hora actual (HH:MM:SS) en la misma línea de la terminal, actualizándola cada segundo.
+
+3. Permisos: El script recibe permisos de ejecución (chmod=755).
+
+4. Punto de entrada: Define el script run.sh como el punto de entrada, lo que significa que se ejecutará automáticamente cuando se inicie el contenedor.
+
+Función:
+
+Cuando el contenedor se ejecuta, el script imprime la hora actual, sobrescribiéndola cada segundo en la misma línea.
 
 Main.yml
 ```
