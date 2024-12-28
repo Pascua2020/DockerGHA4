@@ -72,15 +72,15 @@ ENTRYPOINT /app/run.sh
 ```
 Este Dockerfile crea una imagen Docker basada en busybox que ejecuta un script en un bucle infinito para mostrar la hora actual en tiempo real.
 
-1. Base de la imagen: Usa busybox:latest, una imagen minimalista de Unix.
+📀 1. Base de la imagen: Usa busybox:latest, una imagen minimalista de Unix.
 
-2. Copia del script: Copia un script llamado run.sh al contenedor, que:
+📀 2. Copia del script: Copia un script llamado run.sh al contenedor, que:
 
 Imprime la hora actual (HH:MM:SS) en la misma línea de la terminal, actualizándola cada segundo.
 
-3. Permisos: El script recibe permisos de ejecución (chmod=755).
+📀 3. Permisos: El script recibe permisos de ejecución (chmod=755).
 
-4. Punto de entrada: Define el script run.sh como el punto de entrada, lo que significa que se ejecutará automáticamente cuando se inicie el contenedor.
+📀 4. Punto de entrada: Define el script run.sh como el punto de entrada, lo que significa que se ejecutará automáticamente cuando se inicie el contenedor.
 
 Función:
 
@@ -137,19 +137,19 @@ jobs:
 
 Este archivo main.yml define un flujo de trabajo de GitHub Actions para crear y publicar una imagen Docker en dos registros diferentes (Docker Hub y GitHub Container Registry) cada vez que se hace un push a la rama main.
 
-1. Trigger (Disparador):
+📀 1. Trigger (Disparador):
 
 Se ejecuta automáticamente cuando hay un push a la rama main.
 
-2. Permisos:
+📀 2. Permisos:
 
 Establece los permisos necesarios para escribir en los paquetes y leer los contenidos del repositorio.
 
-3. Job (push_to_registries):
+📀 3. Job (push_to_registries):
 
 Se ejecuta en un entorno Ubuntu (ubuntu-latest).
 
-4. Pasos del Job:
+📀 4. Pasos del Job:
 
 Checkout repository: Clona el repositorio en el entorno de GitHub Actions.
 
