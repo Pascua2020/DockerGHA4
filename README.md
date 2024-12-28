@@ -56,7 +56,7 @@ Requisitos
 
 ⬜️ Código
 
-Dockerfile
+💡 Dockerfile
 ```
 # syntax=docker/dockerfile:1
 FROM busybox:latest
@@ -86,7 +86,7 @@ Función:
 
 Cuando el contenedor se ejecuta, el script imprime la hora actual, sobrescribiéndola cada segundo en la misma línea.
 
-Main.yml
+💡 Main.yml
 ```
 name: Publish Docker image
 
