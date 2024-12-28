@@ -135,6 +135,36 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 ```
 
+Este archivo main.yml define un flujo de trabajo de GitHub Actions para crear y publicar una imagen Docker en dos registros diferentes (Docker Hub y GitHub Container Registry) cada vez que se hace un push a la rama main.
+
+1. Trigger (Disparador):
+
+Se ejecuta automáticamente cuando hay un push a la rama main.
+
+2. Permisos:
+
+Establece los permisos necesarios para escribir en los paquetes y leer los contenidos del repositorio.
+
+3. Job (push_to_registries):
+
+Se ejecuta en un entorno Ubuntu (ubuntu-latest).
+
+4. Pasos del Job:
+
+Checkout repository: Clona el repositorio en el entorno de GitHub Actions.
+
+Log in to Docker Hub: Inicia sesión en Docker Hub usando las credenciales almacenadas en los secretos DOCKER_USERNAME y DOCKER_PASSWORD.
+
+Log in to GitHub Container Registry: Inicia sesión en GitHub Container Registry utilizando las credenciales del GITHUB_TOKEN.
+
+Extract metadata: Utiliza la acción docker/metadata-action para extraer las etiquetas y etiquetas adicionales para las imágenes Docker que se construirán, tanto para Docker Hub como para GitHub Container Registry.
+
+Build and push Docker images: Utiliza la acción docker/build-push-action para construir las imágenes Docker a partir del archivo Dockerfile y las sube a los registros definidos, aplicando las etiquetas y las etiquetas extraídas en el paso anterior.
+
+Propósito:
+
+Automatizar la construcción y publicación de una imagen Docker en Docker Hub y GitHub Container Registry cuando se actualiza la rama main, usando el archivo Dockerfile del repositorio.
+
 🟦 Estado del Proyecto
 
     ☑️ Terminado.
