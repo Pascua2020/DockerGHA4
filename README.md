@@ -1,4 +1,5 @@
-✅️ DockerGHA4 ( Docker, GitHub Actions, Java Spring Boot y Dokku )
+✅️ **DockerGHA4**
+( Docker, GitHub Actions, Java Spring Boot y Dokku )
 
 ```diff 
 
@@ -18,7 +19,7 @@
 
 ⚡️ Dokku: Plataforma de despliegue similar a Heroku que usa contenedores Docker para gestionar aplicaciones de forma sencilla.
 
-🟧 Estructura del Proyecto
+🟧 **Estructura del Proyecto**
 ```
 DockerGHA4/
 │
@@ -48,7 +49,7 @@ DockerGHA4/
 
 💾 dokku-deploy.sh: Script que automatiza el proceso de despliegue de la aplicación en un servidor remoto usando Dokku.
 
-🟨 Instalación
+🟨 **Instalación**
 
  🖱 Requisitos
 
@@ -60,7 +61,7 @@ DockerGHA4/
 
 ℹ️ Java: Debes tener instalado Java y Maven para desarrollar la aplicación de backend con Spring Boot.
 
-⬜️ Código
+⬜️ **Código**
 
 💡 Dockerfile
 ```
@@ -171,20 +172,20 @@ Propósito:
 
 Automatizar la construcción y publicación de una imagen Docker en Docker Hub y GitHub Container Registry cuando se actualiza la rama main, usando el archivo Dockerfile del repositorio.
 
-🟦 Estado del Proyecto
+🟦 **Estado del Proyecto**
 
     ☑️ Terminado.
 
-👤 Colaboración
+👤 **Colaboración**
 
 Este proyecto es de uso personal y no está abierto a colaboraciones externas.  
 Sin embargo, si encuentras algo interesante o tienes alguna pregunta, ¡estaré encantado de escuchar! Puedes contactarme en mi perfil de Github.
 
-🟪 Licencia  
+🟪 **Licencia**
 
 Este proyecto no tiene licencia asignada. Al no contar con una licencia explícita, se considera que todos los derechos están reservados. Si deseas usar este proyecto, por favor, contáctame.
 
-🟫 Autores
+🟫 **Autores**
 
 - Pascua2020 (https://github.com/Pascua2020)
 - UTN
