@@ -47,7 +47,7 @@ Framework backend para el desarrollo de la aplicación web.
 
 Plataforma de despliegue similar a Heroku que usa contenedores Docker para gestionar aplicaciones de forma sencilla.
 
-** Diferencias entre DockerGHA 4 con 1 , 2 y 3 : **
+**Diferencias entre DockerGHA 4 con 1 , 2 y 3 :**
 
 Todos los Dockerfiles son idénticos:
 
