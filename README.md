@@ -21,6 +21,8 @@ Empaqueta la aplicación Spring Boot en un contenedor para garantizar que se eje
 
 ⚡️ *GitHub Actions:* 
 
+![GHA Logo](https://miro.medium.com/v2/resize:fit:1075/0*w5Fsp29pbWIUpW7Q.png)
+
 Automatiza el proceso de construcción, prueba y despliegue de la aplicación con cada cambio en el repositorio.
 
 ⚡️ *Java Spring Boot:* 
