@@ -27,6 +27,8 @@ Automatiza el proceso de construcción, prueba y despliegue de la aplicación co
 
 ⚡️ *Java Spring Boot:* 
 
+![Java SB Logo](https://miro.medium.com/v2/resize:fit:720/format:webp/1*MvUFlFTbiU40ae1SK69-Jg.png)
+
 Framework backend para el desarrollo de la aplicación web.
 
 ⚡️ *Dokku:* 
