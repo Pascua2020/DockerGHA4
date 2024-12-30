@@ -279,23 +279,23 @@ contents: read: Grants read access to repository content.
 
 🔷️ Steps
 
-1. Check out the repository
+▫️ 1. Check out the repository
 
 actions/checkout@v4: Clones the repository to the workflow environment.
 
-2. Log in to Docker Hub
+▫️ 2. Log in to Docker Hub
 
 Uses the docker/login-action to authenticate with Docker Hub.
 
 Credentials (username and password) are securely retrieved from secrets.DOCKER_USERNAME and secrets.DOCKER_PASSWORD.
 
-3. Log in to GitHub Container Registry
+▫️ 3. Log in to GitHub Container Registry
 
 Uses the docker/login-action to log in to the GitHub Container Registry (ghcr.io).
 
 Authentication is done with the current GitHub actor and GITHUB_TOKEN.
 
-4. Extract Metadata
+▫️ 4. Extract Metadata
 
 docker/metadata-action: Generates tags and labels for the Docker images.
 
