@@ -25,33 +25,33 @@ Hashtags #️⃣ : #devops #docker #linux #automation #ci #github-actions #dokku
 
 ## 1️⃣🟥 Features
 
-#### *⚡️ Docker:*
+#### *⚡️ Docker :*
 
 ![Docker Logo](https://dwglogo.com/wp-content/uploads/2017/09/Docker_container_engine_logo.png)
 
 Packages the Spring Boot application in a container to ensure it runs consistently in any environment.
 
-#### *⚡️ GitHub Actions:*
+#### *⚡️ GitHub Actions :*
 
 ![GHA Logo](https://miro.medium.com/v2/resize:fit:1075/0*w5Fsp29pbWIUpW7Q.png)
 
 Automates the build, test, and deployment processes for the application with each change in the repository.
 
-#### *⚡️ Java Spring Boot:*
+#### *⚡️ Java Spring Boot :*
 
 ![Java SB Logo](https://miro.medium.com/v2/resize:fit:720/format:webp/1*MvUFlFTbiU40ae1SK69-Jg.png)
 
 Backend framework for web application development.
 
-#### *⚡️ Dokku:*
+#### *⚡️ Dokku :*
 
 ![Dokku Logo](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj6mNvZ4G3tFQpY1qcVDQdWGSVUW5ljKhyUxfgTeFAZUX5r48Xm8M6mMf55h3IkCw1DC3ERygHIWgsvguq1cYntoluBXdW4-7W_Uhw8JHrvQIeW5T1lIGOuk7WTvkP5O-M_XR4J-6W9Gg-vfhG6B-Q6w75EaJ_eHlGvjxcbEGB3_xckw6OnTwxuBWsL-TRQ/s2800/A%20Deep%20Dive%20with%20Dokku.webp)
 
 A Heroku-like deployment platform that uses Docker containers to manage applications easily.
 
-### Differences between DockerGHA 1, 2, 3, and 4:
+### Differences between DockerGHA 1, 2, 3, and 4 :
 
-#### ⚠️ *All Dockerfiles are identical:*
+#### ⚠️ *All Dockerfiles are identical :*
 
 - Use the base image busybox:latest.
 
@@ -60,9 +60,9 @@ A Heroku-like deployment platform that uses Docker containers to manage applicat
 - Configure the run.sh script as the container's entry point.
 
 
-#### ⚠️ *Main.yml - General differences:*
+#### ⚠️ *Main.yml - General differences :*
 
-*ℹ️ 1. Repositories:*
+*ℹ️ 1. Repositories :*
 
 
 - 1 and 2 push images only to Docker Hub.
@@ -72,12 +72,12 @@ A Heroku-like deployment platform that uses Docker containers to manage applicat
 - 4 pushes to both registries (Docker Hub and GHCR).
 
 
-*ℹ️ 2. Automation:*
+*ℹ️ 2. Automation :*
 
 - Repositories 2, 3, and 4 use docker/metadata-action for automatic tagging, while 1 does not.
 
 
-*ℹ️ 3. Image names:*
+*ℹ️ 3. Image names :*
 
 - Repository 1 has a fixed name: clockbox:latest.
 
@@ -104,23 +104,23 @@ DockerGHA4/
 ├── pom.xml                       # Maven configuration file (if using Maven)
 └── .gitignore                    # Files and directories to ignore in Git
 ```
-#### *💾 Dockerfile:*
+#### *💾 Dockerfile :*
 
 Defines how to build the Docker image for the Spring Boot project.
 
-#### *💾 main.yml:*
+#### *💾 main.yml :*
 
 GitHub Actions configuration file to automate building, testing, and deployment.
 
-#### *💾 src/:*
+#### *💾 src/ :*
 
 Contains the source code for the Spring Boot application.
 
-#### *💾 pom.xml:*
+#### *💾 pom.xml :*
 
 Maven configuration file for dependencies and project build.
 
-#### *💾 dokku-deploy.sh:*
+#### *💾 dokku-deploy.sh :*
 
 Script that automates the deployment process of the application to a remote server using Dokku.
 
@@ -138,25 +138,25 @@ Automate deployment processes via Dokku.
 
 ## 4️⃣🟨 Technologies Used
 
-▫️ *Backend:*
+▫️ *Backend :*
 
-💡Java Spring Boot: Provides a framework for developing microservices and REST APIs.
+💡Java Spring Boot : Provides a framework for developing microservices and REST APIs.
 
-▫️ *Containers:*
+▫️ *Containers :*
 
-💡Docker: Used to create, deploy, and run the application in containers, ensuring consistency across environments.
+💡Docker : Used to create, deploy, and run the application in containers, ensuring consistency across environments.
 
-▫️ *Automation:*
+▫️ *Automation :*
 
-💡GitHub Actions: Configured to automate the build, test, and deployment processes.
+💡GitHub Actions : Configured to automate the build, test, and deployment processes.
 
-▫️ *Deployment:*
+▫️ *Deployment :*
 
-💡Dokku: Used to manage and deploy the application to a virtualized environment, simplifying application hosting.
+💡Dokku : Used to manage and deploy the application to a virtualized environment, simplifying application hosting.
 
-▫️ *Others:*
+▫️ *Others :*
 
-💡Nginx: Used as a reverse proxy for the application to enhance performance and security.
+💡Nginx : Used as a reverse proxy for the application to enhance performance and security.
 
 ## ⬜️ Code
 
@@ -177,11 +177,11 @@ ENTRYPOINT /app/run.sh
 
 This Dockerfile creates a minimal Docker image that runs a simple script displaying the current time in an infinite loop.
 
-*🔷️ 1. Base Image:*
+*🔷️ 1. Base Image :*
 
 FROM busybox:latest: Uses the lightweight busybox image as the base for the container.
 
-*🔷️ 2. Script Creation:*
+*🔷️ 2. Script Creation :*
 
 The COPY --chmod=755 <<EOF /app/run.sh command writes a script directly into the /app/run.sh file inside the container with executable permissions.
 
@@ -195,11 +195,11 @@ Refreshes the output in place (\\r), overwriting the previous time.
 
 Waits for 1 second (sleep 1) before repeating.
 
-*🔷️ 3. Entry Point:*
+*🔷️ 3. Entry Point :*
 
 ENTRYPOINT /app/run.sh: Sets /app/run.sh as the command to be executed when the container starts.
 
-### *🔑 Result:*
+### *🔑 Result :*
 When the container is run, it continuously displays the current time in the console, updating every second.
 
 #### 💡 *Main.yml*
@@ -343,15 +343,15 @@ This project does not have an assigned license. Without an explicit license, all
 - *UTN*
 
 
-## 9️⃣📒 Official Documentation:
+## 9️⃣📒 Official Documentation :
 
-*- Docker:*
+*- Docker :*
 https://docs.docker.com
 
-*- GitHub Actions:*
+*- GitHub Actions :*
 https://docs.github.com/en/actions
 
-*- Dokku:*
+*- Dokku :*
 https://dokku.com/docs/getting-started/installation/
 
 ## 🔟🔄 Notes
