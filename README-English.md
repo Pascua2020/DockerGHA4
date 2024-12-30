@@ -175,6 +175,33 @@ EOF
 ENTRYPOINT /app/run.sh
 ```
 
+This Dockerfile creates a minimal Docker image that runs a simple script displaying the current time in an infinite loop.
+
+1. Base Image:
+
+FROM busybox:latest: Uses the lightweight busybox image as the base for the container.
+
+2. Script Creation:
+
+The COPY --chmod=755 <<EOF /app/run.sh command writes a script directly into the /app/run.sh file inside the container with executable permissions.
+
+The script does the following:
+
+Starts an infinite loop (while true).
+
+Prints the current time in the format HH:MM:SS using the date +%T command.
+
+Refreshes the output in place (\\r), overwriting the previous time.
+
+Waits for 1 second (sleep 1) before repeating.
+
+3. Entry Point:
+
+ENTRYPOINT /app/run.sh: Sets /app/run.sh as the command to be executed when the container starts.
+
+Result:
+When the container is run, it continuously displays the current time in the console, updating every second.
+
 💡 *Main.yml*
 ```
 name: Publish Docker image
