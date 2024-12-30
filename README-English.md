@@ -251,6 +251,76 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 ```
 
+This GitHub Actions workflow automates the process of building and publishing a Docker image to multiple registries. Here's a step-by-step explanation:
+
+Workflow Name
+
+name: Publish Docker image: This workflow is named "Publish Docker image."
+
+Trigger
+
+on: push: The workflow is triggered whenever a change is pushed to the main branch.
+
+Job Details
+
+Job Name
+
+push_to_registries: The job is called "Push Docker image to multiple registries."
+
+Environment
+
+runs-on: ubuntu-latest: The job runs on the latest Ubuntu environment.
+
+permissions:
+
+packages: write: Grants permission to write to container registries.
+
+contents: read: Grants read access to repository content.
+
+Steps
+
+1. Check out the repository
+
+actions/checkout@v4: Clones the repository to the workflow environment.
+
+2. Log in to Docker Hub
+
+Uses the docker/login-action to authenticate with Docker Hub.
+
+Credentials (username and password) are securely retrieved from secrets.DOCKER_USERNAME and secrets.DOCKER_PASSWORD.
+
+3. Log in to GitHub Container Registry
+
+Uses the docker/login-action to log in to the GitHub Container Registry (ghcr.io).
+
+Authentication is done with the current GitHub actor and GITHUB_TOKEN.
+
+4. Extract Metadata
+
+docker/metadata-action: Generates tags and labels for the Docker images.
+
+Images are specified as:
+
+my-docker-hub-namespace/my-docker-hub-repository: For Docker Hub.
+
+ghcr.io/${{ github.repository }}: For GitHub Container Registry.
+
+5. Build and Push Docker Images
+
+docker/build-push-action: Builds the Docker images using the repository's Dockerfile and pushes them to the specified registries.
+
+Metadata (tags and labels) generated in the previous step are applied to the images.
+
+Outcome
+
+Docker images are built from the repository's Dockerfile and published to both:
+
+1. Docker Hub.
+
+2. GitHub Container Registry.
+
+This allows you to store and share the image across multiple platforms seamlessly.
+
 ## 5️⃣🟦 Project Status
 
 ```
