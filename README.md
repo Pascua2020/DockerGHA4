@@ -143,7 +143,7 @@ Debes tener instalado Java y Maven para desarrollar la aplicación de backend co
 
 ## 4️⃣⬜️ **Código**
 
-💡 *Dockerfile*
+#### 💡 *Dockerfile*
 ```
 # syntax=docker/dockerfile:1
 FROM busybox:latest
@@ -181,7 +181,7 @@ Define el script run.sh como el punto de entrada, lo que significa que se ejecut
 
 Cuando el contenedor se ejecuta, el script imprime la hora actual, sobrescribiéndola cada segundo en la misma línea.
 
-💡 *Main.yml*
+#### 💡 *Main.yml*
 ```
 name: Publish Docker image
 
