@@ -177,11 +177,11 @@ ENTRYPOINT /app/run.sh
 
 This Dockerfile creates a minimal Docker image that runs a simple script displaying the current time in an infinite loop.
 
-1. Base Image:
+🔷️1. Base Image:
 
 FROM busybox:latest: Uses the lightweight busybox image as the base for the container.
 
-2. Script Creation:
+🔷️2. Script Creation:
 
 The COPY --chmod=755 <<EOF /app/run.sh command writes a script directly into the /app/run.sh file inside the container with executable permissions.
 
@@ -195,7 +195,7 @@ Refreshes the output in place (\\r), overwriting the previous time.
 
 Waits for 1 second (sleep 1) before repeating.
 
-3. Entry Point:
+🔷️3. Entry Point:
 
 ENTRYPOINT /app/run.sh: Sets /app/run.sh as the command to be executed when the container starts.
 
@@ -253,21 +253,21 @@ jobs:
 
 This GitHub Actions workflow automates the process of building and publishing a Docker image to multiple registries. Here's a step-by-step explanation:
 
-Workflow Name
+🔷️Workflow Name
 
 name: Publish Docker image: This workflow is named "Publish Docker image."
 
-Trigger
+🔷️Trigger
 
 on: push: The workflow is triggered whenever a change is pushed to the main branch.
 
-Job Details
+🔷️Job Details
 
 Job Name
 
 push_to_registries: The job is called "Push Docker image to multiple registries."
 
-Environment
+🔷️Environment
 
 runs-on: ubuntu-latest: The job runs on the latest Ubuntu environment.
 
@@ -277,7 +277,7 @@ packages: write: Grants permission to write to container registries.
 
 contents: read: Grants read access to repository content.
 
-Steps
+🔷️Steps
 
 1. Check out the repository
 
