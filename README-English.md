@@ -305,7 +305,7 @@ my-docker-hub-namespace/my-docker-hub-repository: For Docker Hub.
 
 ghcr.io/${{ github.repository }}: For GitHub Container Registry.
 
-5. Build and Push Docker Images
+▫️ 5. Build and Push Docker Images
 
 docker/build-push-action: Builds the Docker images using the repository's Dockerfile and pushes them to the specified registries.
 
