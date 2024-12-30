@@ -199,7 +199,7 @@ Waits for 1 second (sleep 1) before repeating.
 
 ENTRYPOINT /app/run.sh: Sets /app/run.sh as the command to be executed when the container starts.
 
-Result:
+🔑 Result:
 When the container is run, it continuously displays the current time in the console, updating every second.
 
 💡 *Main.yml*
@@ -311,7 +311,7 @@ docker/build-push-action: Builds the Docker images using the repository's Docker
 
 Metadata (tags and labels) generated in the previous step are applied to the images.
 
-Outcome
+🔑 Outcome
 
 Docker images are built from the repository's Dockerfile and published to both:
 
