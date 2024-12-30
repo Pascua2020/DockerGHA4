@@ -160,7 +160,7 @@ Automate deployment processes via Dokku.
 
 ## ⬜️ Code
 
-💡 *Dockerfile*
+#### 💡 *Dockerfile*
 ```
 # syntax=docker/dockerfile:1
 FROM busybox:latest
@@ -202,7 +202,7 @@ ENTRYPOINT /app/run.sh: Sets /app/run.sh as the command to be executed when the 
 ### *🔑 Result:*
 When the container is run, it continuously displays the current time in the console, updating every second.
 
-💡 *Main.yml*
+#### 💡 *Main.yml*
 ```
 name: Publish Docker image
 
